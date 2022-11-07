@@ -1,0 +1,17 @@
+﻿@model Calculator
+@{
+    ViewData["Title"] = "Calculator";
+}
+
+<div>
+    <h1>Calculator</h1>
+    <form method="post">
+        <input type="number" name="number1" value="@Model.Number1"/>
+        <input type="number" name="number2" value="@Model.Number2" />
+        <button type="submit" value="@Operation.Addition" name="operation">+</button>
+        <button type="submit" value="@Operation.Subtraction" name="operation">-</button>
+        <button type="submit" value="@Operation.Multiplication" name="operation">*</button>
+        <button type="submit" value="@Operation.Division" name="operation">/</button>
+    </form>
+    <p>Result: @Model.Result</p>
+</div>
