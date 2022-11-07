@@ -1,17 +1,16 @@
 ﻿@model Calculator
-@{
-    ViewData["Title"] = "Calculator";
-}
 
-<div>
-    <h1>Calculator</h1>
-    <form method="post">
-        <input type="number" name="number1" value="@Model.Number1"/>
-        <input type="number" name="number2" value="@Model.Number2" />
-        <button type="submit" value="@Operation.Addition" name="operation">+</button>
-        <button type="submit" value="@Operation.Subtraction" name="operation">-</button>
-        <button type="submit" value="@Operation.Multiplication" name="operation">*</button>
-        <button type="submit" value="@Operation.Division" name="operation">/</button>
-    </form>
-    <p>Result: @Model.Result</p>
+<div class="row d-flex justify-content-center">
+    <div class="col-6">
+        <h1 class="display-4 text-center">Calculator</h1>
+        <form method="post">
+            <input class="form-control mb-2" type="text" name="number1" value="@Model.Number1" />
+            <input class="form-control mb-2" type="text" name="number2" value="@Model.Number2" />
+            <button class="btn btn-danger" type="submit" value="@Operation.Addition" name="operation">+</button>
+            <button class="btn btn-success" type="submit" value="@Operation.Subtraction" name="operation">-</button>
+            <button class="btn btn-primary" type="submit" value="@Operation.Multiplication" name="operation">*</button>
+            <button class="btn btn-dark" type="submit" value="@Operation.Division" name="operation">/</button>
+        </form>
+        <p class="display-4">@Model.Result</p>
+    </div>
 </div>
