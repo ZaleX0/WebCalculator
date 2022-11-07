@@ -4,9 +4,9 @@ namespace WebCalculator.Services;
 
 public class CalculatorService
 {
-    public double Calculate(Calculator calculator)
+    public Calculator Calculate(Calculator calculator)
     {
-        return calculator.Operation switch
+        calculator.Result = calculator.Operation switch
         {
             Operation.Addition       => calculator.Number1 + calculator.Number2,
             Operation.Subtraction    => calculator.Number1 - calculator.Number2,
@@ -14,5 +14,6 @@ public class CalculatorService
             Operation.Division       => calculator.Number1 / calculator.Number2,
             _ => 0
         };
+        return calculator;
     }
 }

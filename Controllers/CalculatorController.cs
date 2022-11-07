@@ -20,7 +20,7 @@ public class CalculatorController : Controller
     [HttpPost]
     public IActionResult Index(Calculator calculator)
     {
-        calculator.Result = _service.Calculate(calculator);
+        calculator = _service.Calculate(calculator);
         return View(calculator);
     }
 }
