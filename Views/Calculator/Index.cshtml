@@ -11,6 +11,13 @@
             <button class="btn btn-primary" type="submit" value="@Operation.Multiplication" name="operation">*</button>
             <button class="btn btn-dark" type="submit" value="@Operation.Division" name="operation">/</button>
         </form>
-        <p class="display-4">@Model.Result</p>
+        @if (!String.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <p class="display-6">@Model.ErrorMessage</p>
+        }
+        else
+        {
+            <p class="display-6">@Model.Result</p>
+        }
     </div>
 </div>
